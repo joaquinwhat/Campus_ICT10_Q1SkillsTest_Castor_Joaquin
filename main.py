@@ -8,5 +8,5 @@ def calculate_total(e):
         float(document.getElementById('Dessert').value) * document.getElementById('Dessert').checked
     )
     
-    total = sub * 1.12
+    total = sub * 1.1
     display(f"Total w/ Tax: ₱{total:.2f}", target="receipt")
