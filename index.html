@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receipt Generator</title>
+<link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+</head>
+<body>
+    <h2>Receipt Generator</h2>
+    
+    <div>
+        <input type="checkbox" id="burger" value="150"> Burger (₱150)<br>
+        <input type="checkbox" id="fries" value="90"> Fries (₱90)<br>
+        <input type="checkbox" id="drink" value="60"> Drink (₱60)<br>
+    </div>
+
+    <button py-click="generate_receipt">Calculate</button>
+
+    <div id="receipt"></div>
+
+    <!-- Link to your external main.py file -->
+    <script type="py" src="./main.py"></script>
+</body>
+</html>
