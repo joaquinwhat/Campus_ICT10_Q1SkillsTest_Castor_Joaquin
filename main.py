@@ -1,17 +1,12 @@
-from pyscript import display, document
+from pyscript import document, display
 
-def calculate_total(event):
-    selected_items = document.querySelectorAll('input[type="checkbox"]')
-    total_sum = 0
-    receipt = "Receipt: "
-
-    for item in selected_items:
-        if item.checked:
-            total_sum += float(item.value)
-            receipt += f"{item.id}: ₱{item.value}\n"
-
-    tax = total_sum * 0.12
-    total_sum += tax        
-
-    receipt += f"Total w/ Tax: ₱{total_sum}"
-    display(receipt, target="receipt")
+def calculate_total(e):
+    sub = (
+        float(document.getElementById('Burger').value) * document.getElementById('Burger').checked +
+        float(document.getElementById('Fries').value) * document.getElementById('Fries').checked +
+        float(document.getElementById('Drink').value) * document.getElementById('Drink').checked +
+        float(document.getElementById('Dessert').value) * document.getElementById('Dessert').checked
+    )
+    
+    total = sub * 1.12
+    display(f"Total w/ Tax: ₱{total:.2f}", target="receipt")
