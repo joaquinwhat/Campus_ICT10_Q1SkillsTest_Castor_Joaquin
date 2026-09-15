@@ -1,12 +1,22 @@
 from pyscript import document, display
 
 def calculate_total(e):
-    sub = (
-        float(document.getElementById('Burger').value) * document.getElementById('Burger').checked
-        float(document.getElementById('Fries').value) * document.getElementById('Fries').checked
-        float(document.getElementById('Drink').value) * document.getElementById('Drink').checked
-        float(document.getElementById('Dessert').value) * document.getElementById('Dessert').checked
-    )
+    document.getElementById("receipt").innerHTML = ""
+
+    item1 = document.getElementById('Burger')
+    price1 = float(item1.value) * item1.checked
+
+    item2 = document.getElementById('Fries')
+    price2 = float(item2.value) * item2.checked
+
+    item3 = document.getElementById('Drink')
+    price3 = float(item3.value) * item3.checked
+
+    item4 = document.getElementById('Dessert')
+    price4 = float(item4.value) * item4.checked
+
+    subtotal = price1 + price2 + price3 + price4
+    tax = subtotal * 0.12
+    total = subtotal + tax
     
-    total = sub * 1.1
     display(f"Total w/ Tax: ₱{total:.2f}", target="receipt")
