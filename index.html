@@ -11,6 +11,7 @@
 <body>
 
 <style>
+
     body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             background-color: #d5ebf3;
@@ -24,12 +25,23 @@
             padding: 15px;
             border-radius: 5px;
             text-align: center;
-            color: white;
+            color: #040f24;
         }
+
+    button{
+            background-color: #81a2ae;
+            color: #040f24;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+    }
+
 </style>
 
 
-    <h1>Receipt Generator</h1>
+    <h1> Stuff </h1>
     
     <div>
         <input type="checkbox" id="ting1" value="320"> Notebook Filler 10s (General) (₱320)<br>
@@ -38,9 +50,15 @@
         <input type="checkbox" id="ting4" value="920"> High School Bag (₱920)<br>
     </div>
 
+    <br>
+
     <button py-click="calculate_total">Calculate</button>
 
     <br><br>
+
+    <h2> Receipt </h2>
+
+    <br>
 
     <div id="receipt"></div>
 
