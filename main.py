@@ -16,7 +16,7 @@ def calculate_total(e):
     price4 = float(item4.value) * item4.checked
 
     subtotal = price1 + price2 + price3 + price4
-    tax = subtotal * 0.1
+    tax = subtotal * 0.12
     total = subtotal + tax
 
     display(f"Total w/ Tax: ₱{total:.2f}", target="receipt")
